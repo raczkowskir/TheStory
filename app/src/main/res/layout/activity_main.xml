@@ -19,7 +19,8 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/L1">
+        android:id="@+id/L1"
+        android:weightSum="1">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -67,16 +68,36 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="248dp"
-            android:id="@+id/L14">
+            android:id="@+id/L14"
+            android:layout_weight="0.61">
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="264dp"
                 app:srcCompat="@drawable/v1"
-                android:id="@+id/imageView4"
-                android:layout_weight="1" />
+                android:id="@+id/imageView4" />
 
 
+        </LinearLayout>
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:text="Teraz wszystko zależy od Twoich decyzji."
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/textView2"
+                android:clickable="true"
+                android:focusable="false"
+                android:autoText="false"
+                android:capitalize="words"
+                android:textStyle="normal|bold"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_red_dark"
+                android:shadowColor="@android:color/darker_gray" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
