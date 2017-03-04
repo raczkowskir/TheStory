@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+//niepotrzebna metoda
+    public void doSomething(){
+        System.out.print("Wyswietl coś.");
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
