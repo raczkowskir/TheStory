@@ -1,34 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.yahoo.raczkowskir.thestory.MainActivity">
+    tools:context="com.yahoo.raczkowskir.thestory.MainActivity"
+  >
 
-    <android.support.design.widget.AppBarLayout
+
+    <!-- puki co nie potrzebne
+   <include layout="@layout/content_main"
+        android:id="@+id/include"
+        android:layout_height="509dp" />
+-->
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:id="@+id/L1">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="59dp"
+            android:id="@+id/L11">
 
-    </android.support.design.widget.AppBarLayout>
+        </LinearLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:id="@+id/L12">
 
-    <include layout="@layout/content_main" />
+            <TextView
+                android:text="Witaj w The Story!"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textView"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                android:textStyle="normal|bold"
+                android:textAllCaps="true"
+                android:textAlignment="center" />
+        </LinearLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:id="@+id/L13">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/ic_media_play"
+                android:id="@+id/b1"
+                android:layout_weight="1"
+                android:layout_margin="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:id="@+id/L14">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/button1ok"
+                android:id="@+id/imageView4"
+                android:layout_weight="1" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
