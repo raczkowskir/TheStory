@@ -5,6 +5,8 @@
     <!--
     Strings for MainActivity
     -->
+    <string name="v1Up">"Witaj w The Story!"</string>
+    <string name="v1Down">"Teraz wszystko zależy od Twoich decyzji."</string>
 
 
 </resources>

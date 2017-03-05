@@ -1,5 +1,6 @@
 package com.yahoo.raczkowskir.thestory;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,14 +16,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         final ImageButton B1 = (ImageButton) findViewById(R.id.b1);
+
         B1.setOnClickListener(new View.OnClickListener() {
     @Override
             public void onClick (View view){
         MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.rr1);
         mediaPlayer.start(); // no need to call prepare(); create() does that for you
-    }
+
+        try {
+            Thread.currentThread().sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        startActivity(new Intent(MainActivity.this, Main2Activity.class));
+        }
         });
 
 
@@ -64,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+
+
+
         return super.onOptionsItemSelected(item);
+
     }
 }
