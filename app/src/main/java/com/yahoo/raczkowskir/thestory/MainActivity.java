@@ -10,27 +10,32 @@ import android.view.MenuItem;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-
+    // zmienna do sprawdzania czy przycisk zostal klikniety
+    int checker = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final ImageButton B1 = (ImageButton) findViewById(R.id.b1);
-
+//przycik przenoszacy do nastepnego widoku i wlaczajacy nagranie glosowe
         B1.setOnClickListener(new View.OnClickListener() {
-    @Override
-            public void onClick (View view){
-        MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.rr1);
-        mediaPlayer.start(); // no need to call prepare(); create() does that for you
-
-        try {
-            Thread.currentThread().sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        startActivity(new Intent(MainActivity.this, Main2Activity.class));
-        }
+            @Override
+            public void onClick(View view) {
+                //sprawdzamy czy przycisk byl juz klikany
+                if (checker == 0) {
+                    MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.rr1);
+                    mediaPlayer.start(); // no need to call prepare(); create() does that for you
+//usypmiamy watek na 5 sekund, sluchamy nagrania i czekamy na pojawienie sie nastepnego widoku
+                    try {
+                        Thread.currentThread().sleep(5000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    checker = 1;
+                }
+                startActivity(new Intent(MainActivity.this, Main2Activity.class));
+            }
         });
 
 
@@ -55,8 +60,9 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-//niepotrzebna metoda
-    public void doSomething(){
+
+    //niepotrzebna metoda
+    public void doSomething() {
         System.out.print("Wyswietl coś.");
     }
 
@@ -71,8 +77,6 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
-
 
 
         return super.onOptionsItemSelected(item);

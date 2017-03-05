@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yahoo.raczkowskir.thestory.Main2Activity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:layout_weight="0.48">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/v3"
+                android:id="@+id/obraz" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.10"
+            android:background="@android:color/background_dark"
+            android:layout_margin="5dp"
+            android:weightSum="1">
+
+            <TextView
+                android:text="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/Pytanie"
+                android:background="@android:color/background_dark"
+                android:textStyle="normal|bold"
+                android:textColor="?android:attr/textColorPrimaryInverseDisableOnly"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:capitalize="words"
+                android:isScrollContainer="false"
+                android:gravity="center_vertical|fill_vertical|center_horizontal|fill_horizontal|center"
+                android:foregroundGravity="bottom|center_vertical|fill_vertical|center_horizontal"
+                android:layout_margin="5dp"
+                android:layout_weight="0.99" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30">
+
+            <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/odp1"
+                android:layout_weight="33"
+                android:background="@color/colorPrimaryDark"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/holo_orange_dark"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/odp2"
+                android:layout_weight="33"
+                android:background="?attr/colorPrimaryDark"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/holo_orange_dark"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/odp3"
+                android:layout_weight="33"
+                android:background="@color/colorPrimaryDark"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/holo_orange_dark"
+                android:layout_margin="5dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
