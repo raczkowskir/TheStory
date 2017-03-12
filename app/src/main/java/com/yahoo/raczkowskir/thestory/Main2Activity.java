@@ -12,10 +12,9 @@ String a = "activity_main2v1";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        //tworzymy trzy zmienne pryzcisków
+        //tworzymy dwie zmienne przycisków
         final Button Odp1 = (Button) findViewById(R.id.odp1);
         final Button Odp2 = (Button) findViewById(R.id.odp2);
-        final Button Odp3 = (Button) findViewById(R.id.odp3);
 
         Odp1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,13 +34,5 @@ String a = "activity_main2v1";
             }
         });
 
-        Odp3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick (View view){
-                setContentView(R.layout.activity_main2v3);
-
-
-            }
-        });
     }
 }

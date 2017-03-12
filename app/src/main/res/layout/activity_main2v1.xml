@@ -37,7 +37,7 @@
             android:weightSum="1">
 
             <TextView
-                android:text="1"
+                android:text="Nie wyglada na to zeby gdzies tu była lazienka. Wychodzisz z budynku na ulice i spotykasz kolege. Podasz mu rękę?"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/Pytanie"
@@ -61,7 +61,7 @@
             android:layout_weight="0.51">
 
             <Button
-                android:text="Button"
+                android:text="Tak"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/odp1"
@@ -72,7 +72,7 @@
                 android:layout_margin="5dp" />
 
             <Button
-                android:text="Button"
+                android:text="Nie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/odp2"
@@ -82,16 +82,6 @@
                 android:textColor="@android:color/holo_orange_dark"
                 android:layout_margin="5dp" />
 
-            <Button
-                android:text="Button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/odp3"
-                android:layout_weight="33"
-                android:background="@color/colorPrimaryDark"
-                android:textStyle="normal|bold"
-                android:textColor="@android:color/holo_orange_dark"
-                android:layout_margin="5dp" />
 
             <ImageButton
                 android:layout_width="50dp"
